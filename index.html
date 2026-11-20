@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L’ATELIER DU GÂTEAU | Artisanal Patisserie</title>
+    
+    <!-- Editorial + Thai typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&family=Noto+Serif+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- หน้าจอโหลดเปิดม่าน (Luxury Curtain Preloader) -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <span class="preloader-logo">L’ATELIER</span>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- แถบเมนูด้านบน (Glassmorphism Navbar) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">L’ATELIER</a>
+            <nav class="nav-links">
+                <a href="#collection" class="hover-link">Signature</a>
+                <a href="#craft" class="hover-link">Our Craft</a>
+                <a href="#contact" class="hover-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="admin-trigger" id="open-admin" aria-label="เปิดระบบแอดมิน">
+                    <span class="admin-dot"></span>
+                    Admin
+                </button>
+                <button class="cart-btn hover-target" id="open-cart">
+                    <span>Cart</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ส่วนหัวเว็บไซต์ (Hero Section) -->
+    <section class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="subtitle reveal-text">ARTISANAL FRENCH PATISSERIE</p>
+                <h1 class="title">
+                    <span class="line-wrap"><span class="reveal-line">ศิลปะแห่งความหวาน</span></span>
+                    <span class="line-wrap"><span class="reveal-line italic-en">Crafted in Silence.</span></span>
+                </h1>
+                <p class="description reveal-fade">
+                    รังสรรค์เค้กโฮมเมดระดับไฟน์ไดนิง คัดสรรวัตถุดิบออร์แกนิกชั้นเลิศจากฝรั่งเศสและญี่ปุ่น 
+                    เพื่อสัมผัสที่ละลายในปากและความทรงจำที่แสนพิเศษ
+                </p>
+                <div class="hero-actions reveal-fade">
+                    <a href="#collection" class="btn-primary magnetic-btn">
+                        <span>สำรวจคอลเลกชัน</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="image-frame parallax-frame">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85" alt="Luxury Chocolate Cake">
+                    <span class="frame-index">01</span>
+                    <div class="floating-badge">
+                        <span>100%</span>
+                        <small>Valrhona Chocolate</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนแสดงรายการเค้ก (Signature Collection) -->
+    <section id="collection" class="collection">
+        <div class="section-header">
+            <span class="section-tag">CURATED SELECTION</span>
+            <h2 class="section-title">Signature Cakes</h2>
+        </div>
+
+        <div class="cake-grid" id="cake-grid">
+            <!-- การ์ดที่ 1 -->
+            <article class="cake-card tilt-card">
+                <div class="card-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" alt="Strawberry Shortcake">
+                    <button class="quick-add hover-target" data-name="Noir et Fraise" data-price="1450">
+                        + เพิ่มลงตะกร้า
+                    </button>
+                </div>
+                <div class="card-info">
+                    <div class="card-meta">
+                        <h3>Noir et Fraise</h3>
+                        <span class="price">฿1,450</span>
+                    </div>
+                    <p>สปันจ์วานิลลามาดากัสการ์ สลับชั้นครีมสดฮอกไกโดและสตรอว์เบอร์รีออร์แกนิก</p>
+                </div>
+            </article>
+
+            <!-- การ์ดที่ 2 -->
+            <article class="cake-card tilt-card">
+                <div class="card-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80" alt="Gold Leaf Caramel Cake">
+                    <button class="quick-add hover-target" data-name="L’Or Salted Caramel" data-price="1690">
+                        + เพิ่มลงตะกร้า
+                    </button>
+                </div>
+                <div class="card-info">
+                    <div class="card-meta">
+                        <h3>L’Or Salted Caramel</h3>
+                        <span class="price">฿1,690</span>
+                    </div>
+                    <p>มูสช็อกโกแลต 70% สอดไส้ซอลท์เท็ดคาราเมลโฮมเมด ตกแต่งทองคำเปลวบริสุทธิ์</p>
+                </div>
+            </article>
+
+            <!-- การ์ดที่ 3 -->
+            <article class="cake-card tilt-card">
+                <div class="card-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80" alt="Matcha Opera Cake">
+                    <button class="quick-add hover-target" data-name="Uji Matcha Opera" data-price="1550">
+                        + เพิ่มลงตะกร้า
+                    </button>
+                </div>
+                <div class="card-info">
+                    <div class="card-meta">
+                        <h3>Uji Matcha Opera</h3>
+                        <span class="price">฿1,550</span>
+                    </div>
+                    <p>เค้กโอเปร่า 7 เลเยอร์ ผสานมัทฉะเกรดพิธีการจากเมืองอุจิและอัลมอนด์อบกรอบ</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ส่วนปรัชญาการทำขนม (Minimalist Split Banner) -->
+    <section id="craft" class="craft">
+        <div class="craft-container">
+            <div class="craft-image">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80" alt="Pastry Chef Crafting">
+            </div>
+            <div class="craft-content">
+                <span class="section-tag">OUR PHILOSOPHY</span>
+                <h2>Less Sugar,<br>More Soul.</h2>
+                <p>
+                    เราเชื่อว่าความหรูหราที่แท้จริงคือความเรียบง่าย เค้กทุกปอนด์ถูกอบสดใหม่ตามออเดอร์ 
+                    ปราศจากสารกันบูดและไขมันทรานส์ ลดความหวานลง 30% เพื่อให้รสชาติแท้จริงของวัตถุดิบได้เปล่งประกาย
+                </p>
+                <div class="craft-stats">
+                    <div class="stat">
+                        <span class="stat-num">24h</span>
+                        <span class="stat-label">Slow Fermentation</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">AOP</span>
+                        <span class="stat-label">French Butter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h2 class="footer-logo">L’ATELIER DU GÂTEAU</h2>
+            <p>Sukhumvit 49, Bangkok • เปิดบริการทุกวัน 10:00 – 19:00 น.</p>
+            <div class="footer-bottom">
+                <span>© 2026 L’Atelier Patisserie. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- แถบตะกร้าสินค้า (Slide-out Cart Drawer) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Selection</h3>
+            <button class="close-cart hover-target" id="close-cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">ยังไม่มีรายการขนมในตะกร้า</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>ยอดรวมทั้งหมด</span>
+                <span id="cart-total-price">฿0</span>
+            </div>
+            <button class="btn-checkout" id="checkout-btn">ดำเนินการสั่งซื้อ</button>
+        </div>
+    </aside>
+
+    <!-- การแจ้งเตือน (Luxury Toast Notification) -->
+    <div class="toast" id="toast">เพิ่มลงในตะกร้าเรียบร้อยแล้ว</div>
+
+    <!-- ระบบแอดมิน -->
+    <div class="admin-overlay" id="admin-overlay"></div>
+    <section class="admin-panel" id="admin-panel" aria-label="ระบบผู้ดูแล">
+        <div class="admin-login" id="admin-login">
+            <div class="admin-login-mark">A</div>
+            <p class="admin-eyebrow">ATELIER MANAGEMENT</p>
+            <h2>เข้าสู่ระบบแอดมิน</h2>
+            <p class="admin-login-copy">จัดการเมนูและข้อมูลร้านของคุณ</p>
+            <form id="admin-login-form">
+                <label for="admin-password">รหัสผ่าน</label>
+                <div class="password-wrap">
+                    <input id="admin-password" type="password" autocomplete="current-password" placeholder="กรอกรหัสผ่าน" required>
+                    <button type="button" id="toggle-password" aria-label="แสดงรหัสผ่าน">แสดง</button>
+                </div>
+                <p class="login-error" id="login-error">รหัสผ่านไม่ถูกต้อง</p>
+                <button class="admin-login-button" type="submit">เข้าสู่ระบบ</button>
+            </form>
+        </div>
+
+        <div class="admin-dashboard" id="admin-dashboard">
+            <header class="admin-header">
+                <div>
+                    <p class="admin-eyebrow">L’ATELIER</p>
+                    <h2>แดชบอร์ด</h2>
+                </div>
+                <button class="admin-close" id="close-admin" aria-label="ปิดระบบแอดมิน">✕</button>
+            </header>
+
+            <div class="admin-stats">
+                <article>
+                    <span>สินค้าในคอลเลกชัน</span>
+                    <strong id="admin-product-count">3</strong>
+                </article>
+                <article>
+                    <span>สินค้าในตะกร้าตัวอย่าง</span>
+                    <strong id="admin-cart-count">0</strong>
+                </article>
+                <article>
+                    <span>มูลค่ารวมตัวอย่าง</span>
+                    <strong id="admin-cart-total">฿0</strong>
+                </article>
+            </div>
+
+            <div class="admin-toolbar">
+                <div>
+                    <p class="admin-eyebrow">CATALOG</p>
+                    <h3>จัดการสินค้า</h3>
+                </div>
+                <button class="add-product" id="add-product">+ เพิ่มสินค้า</button>
+            </div>
+            <div class="admin-products" id="admin-products"></div>
+
+            <form class="product-editor" id="product-editor">
+                <input type="hidden" id="edit-index" value="-1">
+                <div class="editor-heading">
+                    <h3 id="editor-title">เพิ่มสินค้าใหม่</h3>
+                    <button type="button" id="cancel-edit">ยกเลิก</button>
+                </div>
+                <div class="editor-grid">
+                    <label>ชื่อสินค้า
+                        <input id="product-name" required placeholder="ชื่อเค้ก">
+                    </label>
+                    <label>ราคา (บาท)
+                        <input id="product-price" type="number" min="0" required placeholder="1450">
+                    </label>
+                    <label class="full-field">รายละเอียด
+                        <textarea id="product-description" rows="3" required placeholder="รายละเอียดสินค้า"></textarea>
+                    </label>
+                    <label class="full-field">ลิงก์รูปภาพ
+                        <input id="product-image" type="url" required placeholder="https://...">
+                    </label>
+                </div>
+                <button class="save-product" type="submit">บันทึกสินค้า</button>
+            </form>
+
+            <button class="admin-logout" id="admin-logout">ออกจากระบบ</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
